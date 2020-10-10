@@ -5,7 +5,7 @@ const helmet=require("helmet");
 const morgan=require("morgan");
 const yup=require("yup");
 const { nanoid }=require("nanoid");
-const db = require('monk')('localhost/ziedbrah');
+const db = require('monk')('mongodb+srv://yelpcamp:zied24934500@cluster0.rysp3.mongodb.net/<dbname>?retryWrites=true&w=majority');
 const urls = db.get('urls');
 urls.createIndex({ slug: 1 }, { unique: true });
 
